@@ -33,46 +33,94 @@ header:hover {
 
 /*ESTILOS GENERALES*/
 
+/*NAVBAR*/
+body {
+  font-family: "Inconsolata", monospace;
+  background-image: url("../img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1; /* Aseguramos que ocupa todo el espacio vertical disponible */
+}
+header {
+  width: 100%;
+  background-color: #141414;
+  position: fixed;
+  padding: 0.5rem 0;
+  opacity: 60%;
+  
+  transition: top 0.5s ease-in-out;
+  z-index: 5;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+
+header:hover {
+  opacity: 100%;
+}
+
+
+
+
+
+/*ESTILOS GENERALES*/
+
 .tabla-grid {
+  align-items: end;
+  background-color: #00000060;
+  padding: 7vh;
   display: grid;
+  border-radius: 15px;
   grid-template-columns: 1fr 2fr;
-  grid-row-gap: 10px;
-  margin: 0 auto;
+  grid-row-gap: 30px;
+  margin: auto;
   width: 50%;
-  margin-top: 40vh;
-  align-items: start;
   min-width: 300px;
+  height: auto; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 label {
   font-weight: bold;
-  font-size: 14px;
-  color: #393939;
-   
+  font-size: 110%;
+  color: #ffffffd3;
+  align-self: start;
 }
 select, input[type="text"], input[type="password"] {
   height: 38px;
+  font-family: "Inconsolata", monospace;
   border: none;
   border-radius: 5px;
   background-color: #f4f4f4;
-  color: #393939;
+  color: #000000;
   font-size: 14px;
 }
 select:focus, input[type="text"]:focus, input[type="password"]:focus {
   outline: none;
-  box-shadow: 0 0 0 1px #7b7b7b;
+  
 }
 .btn {
   height: 40px;
   border: none;
   border-radius: 5px;
-  background-color: #0091FF;
+  background-color: #ffffff93;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
+  transition:0.3s ease-in-out;
 }
 .btn:hover {
-  background-color: #007ac5;
+  background-color: #ff0000b0;
   cursor: pointer;
 }
 
@@ -81,4 +129,3 @@ select:focus, input[type="text"]:focus, input[type="password"]:focus {
 .logo {
   height: 50px;
 }
-
