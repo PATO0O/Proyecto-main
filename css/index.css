@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Inconsolata", monospace;
-  background-color: #6967675d;
+  background-color: #e4e4e4;
   margin: 0;
   scroll-snap-type: y mandatory;
 }
@@ -16,7 +16,7 @@ header {
   position: fixed;
   padding: 0.5rem 0;
   opacity: 60%;
-  
+
   transition: top 0.5s ease-in-out;
   z-index: 5;
   padding-left: 3%;
@@ -119,7 +119,6 @@ header:hover {
     min-width: 200px;
     transition: all 0.3s ease;
   }
-
 }
 
 /*LOGO MOTO*/
@@ -160,8 +159,6 @@ header:hover {
   border-left: none;
   background-color: #ddd;
 }
-
-
 
 /*DESPLEGABLES NAVBAR*/
 
@@ -209,7 +206,6 @@ header:hover {
   z-index: 1;
   height: 150px;
   width: 150px;
-  
 }
 
 .scroll-down-button button {
@@ -221,7 +217,6 @@ header:hover {
 
 .scroll-down-button button:hover {
   transform: scale(1.1);
-  
 }
 
 .current-section {
@@ -237,33 +232,27 @@ header:hover {
   }
 }
 
-
-
 /*SECCION2*/
-#section2 { 
-  
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
-  max-width: 100vh; 
-  min-width:47vh;
-  margin:0 auto; 
- } 
 
- #section2 img:hover { 
-  filter: brightness(0.5); 
- } 
+#section2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+  min-width: 70vh;
+}
 
+#section2 img:hover {
+  filter: brightness(0.5);
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1%;
-  height: 99vh;
-  width:99vh;
-  }
-
+  max-width: 80%;
+  margin: 0 auto;
+}
 .grid-item {
   position: relative;
 }
@@ -274,11 +263,11 @@ header:hover {
   grid-template-rows: 1fr 1fr;
   gap: 1%;
   position: relative;
-  object-fit: cover ;
+  object-fit: contain;
 }
 
 .imagenes {
-  filter: brightness(0.7); 
+  filter: brightness(0.7);
   border-radius: 7px;
   display: flex;
   width: 100%;
@@ -289,39 +278,102 @@ header:hover {
 }
 /*TEXTO IMAGENES*/
 .texto-imagen {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   position: absolute; /* Establecer el texto como posición absoluta */
   left: 0; /* Posicionar el texto en la parte izquierda */
   bottom: 0;
-  transform: translate(5%, 7%); /* Dar un pequeño margen al texto para que no se pegue a los bordes */
+  transform: translate(
+    5%,
+    7%
+  ); /* Dar un pequeño margen al texto para que no se pegue a los bordes */
   color: #ffffff; /* Establecer el color del texto */
   font-size: 250%; /* Establecer el tamaño de fuente del texto */
   text-align: center; /* Alinear el texto en el centro */
-  margin-left:5%;
+  margin-left: 5%;
 }
 
 .texto-imagen2 {
-  font-family: 'Varela Round', sans-serif;
-    position: absolute;
-    top: 12vh;
-    right:auto;
-    margin-top:15%;
-    margin-left:9%;
-    padding-bottom:0vh;
-    color: #ffffff; 
-    font-size: 250%;
-   
-    z-index:1; 
-    
+  position: absolute;
+  bottom:50%;
+  left: 10%;
+  color: #ffffff;
+  font-family: "Varela Round", sans-serif;
+  font-size: 250%;
+  text-align: center;
+  z-index: 1;
 }
 
 #texto8 {
-  pointer-events: none; 
+  pointer-events: none;
+}
+/* -------seccion 3 ------------*/
+
+
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  max-width: 800px; /* Opcional: agregar un ancho máximo al contenedor */
+}
+
+.tabla2 {
+  /* Opcional: establecer el ancho de la tabla en el 100% */
+  width: 100%;
+}
+
+.tabla2 td {
+  /* Opcional: agregar estilos a las celdas de la tabla */
+  padding: 10px;
+  text-align: center;
 }
 
 
 
 
+/*pie de pagina*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  font-size: 13px;
+}
 
 
+.footer-item1 {
+  font-size: 20px;
+  text-align: center;
+}
 
+.footer-item1 img {
+  width: 30%;
+  height: 30%;
+}
+
+.footer-item2 img {
+  width: 40px;
+  height: 40px;
+  margin-left: 55px;
+  margin-top: 5%
+}
+
+.docs {
+  order: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.docs :hover {
+  font-weight: bold;
+}
+
+.docs a{
+  text-decoration: none;
+  color: #000000;
+}
